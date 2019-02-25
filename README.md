@@ -50,7 +50,7 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Version 0.0.2
 
-- Chenged From Athom Forum to Community Topic
+- Changed From Athom Forum to Community Topic
 
 ## Version 0.0.1
 
