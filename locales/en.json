@@ -1,0 +1,17 @@
+{
+    "appLogStart":"enigma2 app started successfully",
+    "settings":{
+        "alpha": "-- THE APP IS IN ALPHA STATUS --",
+        "description": "Currently it is required to set the IP Address and the Port of your enigma2 Receiver by Hand. Therefor it is the best, if you also Setup your Router to a dedicated IP-Adress for your Receiver.",
+        "warning": "Due to the current Alpha State, the app can crash ant any time, if you find issues, please file them on GitHub or on the Homey Topic!",
+        "config": "Configuration Data:",
+        "ip": "IP-Adress: ",
+        "port": "Port: ",
+        "button": "Save Configuration",
+        "obtain_info_header": "Obtain the needed Informations:",
+        "info_ipadress": "IP-Adress: ",
+        "info_ipadress_body": "On your Receiver open up the following&#58;<br>Open Main Menu<br>Select Setup<br>Select System<br>Select Network<br>Choose Adapter Settings<br>Under Current configuration you will find your IP-Adress",
+        "info_port": "Port: ",
+        "info_port_body": "If you don't have changed anything, your Port should be:<br>80<br>or<br>8080<br>This depends on the Box you use.<br>If you like to check, open a webbrowser and type in the IP-Adress of your box, if this opens the WebIf, then Port 80 is used.<br>If this opens a fault site, type in your IP-Adress followed by &#58;8080, if this shows the WebIf, then Port 8080 is used.<br>Else you can check the configuration of the WebIf if the Ports has changed. Therfor open the Plugin Menu and check WebIf Config."
+    }
+}

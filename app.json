@@ -1,0 +1,176 @@
+{
+  "id": "eu.carp3-noctem.enigma2",
+  "name": {
+    "en": "enigma2",
+    "nl": "enigma2"
+  },
+  "description": {
+    "en": "Connect your Homey with enigma2 Receivers",
+    "nl": "Verbind ja Homey met enigma2 ontvanger"
+  },
+  "version": "0.0.1",
+  "brandColor": "#E3B30B",
+  "athomForumDiscussionId": 9427,
+  "sdk": 2,
+  "compatibility": ">=1.5.0",
+  "category": [
+    "video"
+  ],
+  "tags": {
+    "en": [
+      "enigma2",
+      "DVB",
+      "DVB-S2",
+      "Receiver",
+      "AB-COM",
+      "IPBOX",
+      "PRISMCUBE",
+      "ANADOL",
+      "AX TECHNOLOGY",
+      "AX",
+      "DREAMBOX",
+      "DREAMMULTIMEDIA",
+      "EDISON",
+      "FORMULER",
+      "GIGABLUE",
+      "MEDI@LINK",
+      "OCTAGON",
+      "OPTICUM",
+      "PROTEK",
+      "RED EAGLE",
+      "REDLINE",
+      "SPYCAT",
+      "VU+",
+      "ENIGMA",
+      "LINUX",
+      "VERU"
+    ],
+    "nl": [
+      "enigma2",
+      "DVB",
+      "DVB-S2",
+      "Receiver",
+      "AB-COM",
+      "IPBOX",
+      "PRISMCUBE",
+      "ANADOL",
+      "AX TECHNOLOGY",
+      "AX",
+      "DREAMBOX",
+      "DREAMMULTIMEDIA",
+      "EDISON",
+      "FORMULER",
+      "GIGABLUE",
+      "MEDI@LINK",
+      "OCTAGON",
+      "OPTICUM",
+      "PROTEK",
+      "RED EAGLE",
+      "REDLINE",
+      "SPYCAT",
+      "VU+",
+      "ENIGMA",
+      "LINUX",
+      "VERU"
+    ]
+  },
+  "author": {
+    "name": "Markus Mahr",
+    "email": "app@carp3-noctem.eu",
+    "website": "http://carp3-noctem.eu"
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "carp3noctem"
+      }
+    }
+  },
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "bugs": {
+    "url": "https://github.com/carp3-noctem/eu.carp3-noctem.enigma2/issues"
+  },
+  "dependencies": {
+    "request": "^2.81.0"
+  },
+  "flow": {
+  "actions": [
+    {
+      "id": "powerstate_on",
+      "title": {
+        "en": "Wake from Standby",
+        "nl": "Wakker vanuit stand-by"
+      }
+    },
+    {
+      "id": "powerstate_off",
+      "title": {
+        "en": "Send to Standby",
+        "nl": "Verzenden naar stand-by"
+      }
+    },
+    {
+      "id": "powerstate_restart_e2",
+      "title": {
+        "en": "Reboot enigma2 software",
+        "nl": "Start de enigma2-software opnieuw"
+      }
+    },
+    {
+      "id": "powerstate_rebootBox",
+      "title": {
+        "en": "Reboot Receiver",
+        "nl": "start de ontvanger opnieuw op"
+      }
+    },
+    {
+      "id": "powerstate_deepStandy",
+      "title": {
+        "en": "Deep Standby",
+        "nl": "Diepe standby-modus"
+      },
+      "hint": {
+        "en": "No Software Control will be possible, after executing of this Command!",
+        "nl": "Geen enkele softwarebesturing is mogelijk, na het uitvoeren van dit commando!"
+      }
+    },
+    {
+      "id": "vol_mute",
+      "title": {
+        "en": "Mute Volume",
+        "nl": "Volume dempen"
+      }
+    },
+    {
+      "id": "vol_unmute",
+      "title": {
+        "en": "Unmute Volume",
+        "nl": "demp het volume"
+      }
+    },
+    {
+      "id": "vol_set",
+      "title": {
+        "en": "Set Volume to (0-100)",
+        "nl": "Volume instellen op (0-100)"
+      },
+      "args": [
+        {
+          "name": "volume",
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "placeholder": {
+            "en": "Set Volume from 0 to 100",
+            "nl": "Stel het volume in van 0 tot 100"
+          }
+        }
+      ]
+    }
+  ]
+}
+}

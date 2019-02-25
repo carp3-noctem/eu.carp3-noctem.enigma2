@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+        <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+</head>
+<body>
+   <h1><p style="color: #c00; font-weight: bold; text-align: center" data-i18n="settings.alpha"></p></h1>
+    <p data-i18n="settings.description"></p>
+    <p data-i18n="settings.warning"></p>
+    <fieldset style="width: 100%;">
+        <legend data-i18n="settings.config"></legend>
+        <table>
+            <tr>
+                <td style="width: 9%">&nbsp;</td>
+                <td style="width: 20%; text-align:right"><label for="enigma2_ip" data-i18n="settings.ip"></label></td>
+                <td style="width: 1%"></td>
+                <td style="width: 40%; text-align:left"><input id="enigma2_ip" type="text" value="" /></td>
+                <td style="width: 30%">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 9%">&nbsp;</td>
+                <td style="width: 20%; text-align:right"><label for="enigma2_port" data-i18n="settings.port"></label></td>
+                <td style="width: 1%"></td>
+                <td style="width: 40%; text-align:left"><input id="enigma2_port" type="text" value="80" /></td>
+                <td style="width: 30%">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 9%">&nbsp;</td>
+                <td style="width: 20%">&nbsp;</td>
+                <td style="width: 1%"></td>
+                <td style="width: 40%">&nbsp;</td>
+                <td style="width: 30%">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 9%">&nbsp;</td>
+                <td style="width: 20%">&nbsp;</td>
+                <td style="width: 1%"></td>
+                <td style="width: 40%"><button id="save" class="right" data-i18n="settings.button"></button></td>
+                <td style="width: 30%">&nbsp;</td>
+            </tr>
+        </table>
+    </fieldset>
+        <script type="text/javascript">
+
+        // a method named 'onHomeyReady' must be present in your code
+        function onHomeyReady( Homey ){
+
+            // Tell Homey we're ready to be displayed
+            Homey.ready();
+
+            var enigma2_ipElement = document.getElementById('enigma2_ip');
+            var enigma2_portElement = document.getElementById('enigma2_port');
+            var saveElement = document.getElementById('save');
+
+            Homey.get('enigma2_ip', function( err, enigma2_ip ) {
+               if( err ) return Homey.alert( err );
+               enigma2_ipElement.value = enigma2_ip;
+            });
+
+            Homey.get('enigma2_port', function( err, enigma2_port ) {
+               if( err ) return Homey.alert( err );
+               enigma2_portElement.value = enigma2_port;
+            });
+
+            saveElement.addEventListener('click', function(e) {
+
+                Homey.set('enigma2_ip', enigma2_ipElement.value, function( err ){
+                    if( err ) return Homey.alert( err );
+                });
+                Homey.set('enigma2_port', enigma2_portElement.value, function( err ){
+                    if( err ) return Homey.alert( err );
+                });
+
+            });
+        }
+        </script>
+
+    </br>
+    </br>
+    </br>
+    </br>
+    <h1 data-i18n="settings.obtain_info_header"></h1>
+    <p style="color: #c00; font-weight: bold" data-i18n="settings.info_ipadress"></p>
+    <p data-i18n="settings.info_ipadress_body"></p>
+    <p style="color: #c00; font-weight: bold" data-i18n="settings.info_port"></p>
+    <p data-i18n="settings.info_port_body"></p>
+</body>
+</html>
