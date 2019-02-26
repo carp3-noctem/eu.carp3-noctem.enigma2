@@ -8,7 +8,7 @@
     "en": "Connect your Homey with enigma2 Receivers",
     "nl": "Verbind ja Homey met enigma2 ontvanger"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "brandColor": "#E3B30B",
   "homeyCommunityTopicId": 9427,
   "sdk": 2,
@@ -167,6 +167,28 @@
           "placeholder": {
             "en": "Set Volume from 0 to 100",
             "nl": "Stel het volume in van 0 tot 100"
+          }
+        }
+      ]
+    },
+    {
+      "id": "command_send",
+      "title": {
+        "en": "Send Command as ID to Box",
+        "nl": "Stuur commando als ID naar Box"
+      },
+      "hint": {
+        "en": "For supported Command ID's please look at http://enigma2.carp3-noctem.eu",
+        "nl": "Raadpleeg voor ondersteunde Command ID's http://enigma2.carp3-noctem.eu"
+      },
+      "args": [
+        {
+          "name": "command",
+          "type": "number",
+          "step": 1,
+          "placeholder": {
+            "en": "Provide Command ID",
+            "nl": "Geef opdracht-ID op"
           }
         }
       ]

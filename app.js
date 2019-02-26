@@ -176,5 +176,14 @@ setVolumeAction
 	VolumeControl(Volume);
     return true;
 });
+//Send Command ID
+let sendCommandAction = new Homey.FlowCardAction('command_send');
+sendCommandAction
+  .register()
+  .registerRunListener(( args, state ) => {
+	  var commandID = 'remotecontrol?command=' + args.command;
+	  sendCommandID(commandID);
+    return true;
+});
 
 module.exports = enigma2;

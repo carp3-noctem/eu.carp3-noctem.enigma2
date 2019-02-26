@@ -48,6 +48,10 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
+## Version 0.0.3
+
+- Added Send CommandID via then / Action Flowcard for Supported ID's visit [http://enigma2.carp3-noctem.eu](http://enigma2.carp3-noctem.eu)
+
 ## Version 0.0.2
 
 - Changed From Athom Forum to Community Topic
