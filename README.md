@@ -71,6 +71,11 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
+## Version 0.0.6
+
+- reorder of then / action flowcards
+- redo README.md for better overview
+
 ## Version 0.0.5
 
 - Added Message Function (special Format required for Text Input!)
