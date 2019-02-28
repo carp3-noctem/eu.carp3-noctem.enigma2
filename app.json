@@ -8,7 +8,7 @@
     "en": "Connect your Homey with enigma2 Receivers",
     "nl": "Verbind ja Homey met enigma2 ontvanger"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "brandColor": "#E3B30B",
   "homeyCommunityTopicId": 9427,
   "sdk": 2,
@@ -192,7 +192,30 @@
           }
         }
       ]
+    },
+    {
+      "id": "message_send",
+      "title": {
+        "en": "Send Message to Box",
+        "nl": "Stuur bericht naar box"
+      },
+      "hint": {
+        "en": "Message needs the following format: \n\nType|Timeout|Text \n\nTypes: \n0 = YES / NO \n1 = INFO \n2 = MESSAGE \n3 = ATTENTION \nTimeout = Seconds or 0 for endless display \nMessage = Your Text",
+        "nl": "Het bericht heeft het volgende formaat nodig: \n\nType|Time-out|Tekst \n\nTypes: \n0 = JA / NEE \n1 = INFO \n2 = BERICHT \n3 = AANDACHT \nTimeout = seconden of 0 voor eindeloze weergave \nBericht = Je berichtje"
+      },
+      "args": [
+        {
+          "name": "msg_text_full",
+          "type": "text",
+          "placeholder": {
+            "en": "Type Message Text here",
+            "nl": "Typ hier de berichttekst"
+          }
+        
+        }
+      ]
     }
+
   ]
 }
 }

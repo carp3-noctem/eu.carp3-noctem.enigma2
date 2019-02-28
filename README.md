@@ -17,11 +17,15 @@ This Project allows Control of Enigma2 devices via Homey over TCP/IP
     Reboot Enigma2 Software
     Reboot Receiver
     Deep Standby (DANGER: after Triggering, no more Software Control possible)
+    send Command ID's to control Box
 
   - Volume:
     Mute
     Unmute
     Set Volume to Level (0-100)
+
+  - Messages:
+    Send all Types of Messages Format Type|Timeout|Message required!
 
 ## Currently planned
 
@@ -33,8 +37,6 @@ This Project allows Control of Enigma2 devices via Homey over TCP/IP
 
 - then (Action) Cards:
   - Volume: Increase Volume by x Times, decrease Volume by x Times
-  - Messages: Support of Messages
-  - Commands: Send of Command ID's
 
 ## For Supported Devices check the following
 
@@ -47,6 +49,11 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 3. Pictures of the Remotes can be found here: [OpenWebif Remote Pictures](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/tree/master/plugin/public/images/remotes)
 
 ## Changelog
+
+## Version 0.0.5
+
+- Added Message Function (special Format required for Text Input!)
+- Corrected Type at send Box to Standby Function
 
 ## Version 0.0.4
 
