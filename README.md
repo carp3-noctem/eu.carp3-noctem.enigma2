@@ -1,11 +1,11 @@
 # enigma2 Support for Homey
 
-This Project allows Control of Enigma2 devices via Homey over TCP/IP
+This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com/en/) over TCP/IP
 
 ## Requirements
 
-1) openWebif needs to be available on the enigma2 device
-2) Setup of enigma2 App via Homey required.
+1) [openWebif](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif) needs to be available on the enigma2 device
+2) Setup of enigma2 App via [Homey](https://www.athom.com/en/) required.
    Start Homey App, open the More section, select Apps Menu, open enigma2 entry and Click on "Configure app"
 
 ## Support Overview
@@ -24,11 +24,11 @@ This Project allows Control of Enigma2 devices via Homey over TCP/IP
 
 ### then / action flowcards
 
-- [x] deep standby mode
+- [x] [deep standby mode]()
 - [x] reboot enigma2 software
 - [x] reboot receiver
 - [x] send command as ID (see below for Info)
-- [x] send message
+- [x] [send message](#messages)
 - [x] standby mode
 - [x] standby wake
 - [ ] Volume decrease by X steps
@@ -37,6 +37,11 @@ This Project allows Control of Enigma2 devices via Homey over TCP/IP
 - [x] Volume set (0% - 100%)
 - [x] Volume unmute
 - [ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
+
+## deep standby mode
+
+**WARNING:**
+After this flowcard is executed you can't control the box over the Network Interface anymore!
 
 ## Messages
 
