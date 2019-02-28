@@ -12,31 +12,31 @@ This Project allows Control of Enigma2 devices via Homey over TCP/IP
 
 ### when / trigger flowcards
 
-[ ] polling required, therefor currently not decided. If you like to put in arguments, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427)
+- [ ] polling required, therefor currently not decided. If you like to put in arguments, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427)
 
 ### and / condition flowcards
 
-[ ] Power is ON
-[ ] Power is OFF
-[ ] Radio mode is used
-[ ] TV mode is used
-[ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
+- [ ] Power is ON
+- [ ] Power is OFF
+- [ ] Radio mode is used
+- [ ] TV mode is used
+- [ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
 
 ### then / action flowcards
 
-[x] deep standby mode
-[x] reboot enigma2 software
-[x] reboot receiver
-[x] send command as ID (see below for Info)
-[x] send message
-[x] standby mode
-[x] standby wake
-[ ] Volume decrease by X steps
-[ ] Volume increase by X steps
-[x] Volume mute
-[x] Volume set (0% - 100%)
-[x] Volume unmute
-[ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
+- [x] deep standby mode
+- [x] reboot enigma2 software
+- [x] reboot receiver
+- [x] send command as ID (see below for Info)
+- [x] send message
+- [x] standby mode
+- [x] standby wake
+- [ ] Volume decrease by X steps
+- [ ] Volume increase by X steps
+- [x] Volume mute
+- [x] Volume set (0% - 100%)
+- [x] Volume unmute
+- [ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
 
 ## Messages
 
