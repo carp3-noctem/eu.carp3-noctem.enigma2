@@ -67,6 +67,7 @@ function sendCommandID(commandID) {
     }
     request(options, callback);
   }
+// Start Power Control	
 //Function to check Powerstate
 // overhand
 // checkPowerState('ON')
