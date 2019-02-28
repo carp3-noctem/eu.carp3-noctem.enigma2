@@ -1,12 +1,10 @@
 {
   "id": "eu.carp3-noctem.enigma2",
   "name": {
-    "en": "enigma2",
-    "nl": "enigma2"
+    "en": "enigma2"
   },
   "description": {
-    "en": "Connect your Homey with enigma2 Receivers",
-    "nl": "Verbind ja Homey met enigma2 ontvanger"
+    "en": "Connect your Homey with enigma2 Receivers"
   },
   "version": "0.0.5",
   "brandColor": "#E3B30B",
@@ -18,34 +16,6 @@
   ],
   "tags": {
     "en": [
-      "enigma2",
-      "DVB",
-      "DVB-S2",
-      "Receiver",
-      "AB-COM",
-      "IPBOX",
-      "PRISMCUBE",
-      "ANADOL",
-      "AX TECHNOLOGY",
-      "AX",
-      "DREAMBOX",
-      "DREAMMULTIMEDIA",
-      "EDISON",
-      "FORMULER",
-      "GIGABLUE",
-      "MEDI@LINK",
-      "OCTAGON",
-      "OPTICUM",
-      "PROTEK",
-      "RED EAGLE",
-      "REDLINE",
-      "SPYCAT",
-      "VU+",
-      "ENIGMA",
-      "LINUX",
-      "VERU"
-    ],
-    "nl": [
       "enigma2",
       "DVB",
       "DVB-S2",
@@ -99,63 +69,86 @@
   "flow": {
   "actions": [
     {
-      "id": "powerstate_on",
+      "id": "powerstate_deepStandy",
       "title": {
-        "en": "Wake from Standby",
-        "nl": "Wakker vanuit stand-by"
-      }
-    },
-    {
-      "id": "powerstate_off",
-      "title": {
-        "en": "Send to Standby",
-        "nl": "Verzenden naar stand-by"
+        "en": "deep standby mode"
+      },
+      "hint": {
+        "en": "No Software Control will be possible, after executing of this Command!"
       }
     },
     {
       "id": "powerstate_restart_e2",
       "title": {
-        "en": "Reboot enigma2 software",
-        "nl": "Start de enigma2-software opnieuw"
+        "en": "reboot enigma2 software"
       }
     },
     {
       "id": "powerstate_rebootBox",
       "title": {
-        "en": "Reboot Receiver",
-        "nl": "start de ontvanger opnieuw op"
+        "en": "reboot receiver"
       }
     },
     {
-      "id": "powerstate_deepStandy",
+      "id": "command_send",
       "title": {
-        "en": "Deep Standby",
-        "nl": "Diepe standby-modus"
+        "en": "send command as ID"
       },
       "hint": {
-        "en": "No Software Control will be possible, after executing of this Command!",
-        "nl": "Geen enkele softwarebesturing is mogelijk, na het uitvoeren van dit commando!"
+        "en": "For supported Command ID's please look at http://enigma2.carpe3-noctem.eu"
+      },
+      "args": [
+        {
+          "name": "command",
+          "type": "number",
+          "step": 1,
+          "placeholder": {
+            "en": "command ID"
+          }
+        }
+      ]
+    },
+    {
+      "id": "message_send",
+      "title": {
+        "en": "send message"
+      },
+      "hint": {
+        "en": "Message needs the following format: \n\nType|Timeout|Text \n\nTypes: \n0 = YES / NO \n1 = INFO \n2 = MESSAGE \n3 = ATTENTION \nTimeout = Seconds or 0 for endless display \nMessage = Your Text"
+      },
+      "args": [
+        {
+          "name": "msg_text_full",
+          "type": "text",
+          "placeholder": {
+            "en": "Message Text"
+          }
+        
+        }
+      ]
+    },
+    {
+      "id": "powerstate_off",
+      "title": {
+        "en": "standby mode"
+      }
+    },
+    {
+      "id": "powerstate_on",
+      "title": {
+        "en": "standby wake"
       }
     },
     {
       "id": "vol_mute",
       "title": {
-        "en": "Mute Volume",
-        "nl": "Volume dempen"
-      }
-    },
-    {
-      "id": "vol_unmute",
-      "title": {
-        "en": "Unmute Volume",
-        "nl": "demp het volume"
+        "en": "Volume mute"
       }
     },
     {
       "id": "vol_set",
       "title": {
-        "en": "Set Volume to (0-100)",
-        "nl": "Volume instellen op (0-100)"
+        "en": "set Volume to (0-100)"
       },
       "args": [
         {
@@ -165,57 +158,17 @@
           "max": 100,
           "step": 1,
           "placeholder": {
-            "en": "Set Volume from 0 to 100",
-            "nl": "Stel het volume in van 0 tot 100"
+            "en": "Volume set (0% - 100%)"
           }
         }
       ]
     },
     {
-      "id": "command_send",
+      "id": "vol_unmute",
       "title": {
-        "en": "Send Command as ID to Box",
-        "nl": "Stuur commando als ID naar Box"
-      },
-      "hint": {
-        "en": "For supported Command ID's please look at http://enigma2.carpe3-noctem.eu",
-        "nl": "Raadpleeg voor ondersteunde Command ID's http://enigma2.carpe3-noctem.eu"
-      },
-      "args": [
-        {
-          "name": "command",
-          "type": "number",
-          "step": 1,
-          "placeholder": {
-            "en": "Provide Command ID",
-            "nl": "Geef opdracht-ID op"
-          }
-        }
-      ]
-    },
-    {
-      "id": "message_send",
-      "title": {
-        "en": "Send Message to Box",
-        "nl": "Stuur bericht naar box"
-      },
-      "hint": {
-        "en": "Message needs the following format: \n\nType|Timeout|Text \n\nTypes: \n0 = YES / NO \n1 = INFO \n2 = MESSAGE \n3 = ATTENTION \nTimeout = Seconds or 0 for endless display \nMessage = Your Text",
-        "nl": "Het bericht heeft het volgende formaat nodig: \n\nType|Time-out|Tekst \n\nTypes: \n0 = JA / NEE \n1 = INFO \n2 = BERICHT \n3 = AANDACHT \nTimeout = seconden of 0 voor eindeloze weergave \nBericht = Je berichtje"
-      },
-      "args": [
-        {
-          "name": "msg_text_full",
-          "type": "text",
-          "placeholder": {
-            "en": "Type Message Text here",
-            "nl": "Typ hier de berichttekst"
-          }
-        
-        }
-      ]
+        "en": "Volume unmute"
+      }
     }
-
   ]
 }
 }

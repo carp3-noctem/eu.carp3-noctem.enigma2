@@ -8,35 +8,51 @@ This Project allows Control of Enigma2 devices via Homey over TCP/IP
 2) Setup of enigma2 App via Homey required.
    Start Homey App, open the More section, select Apps Menu, open enigma2 entry and Click on "Configure app"
 
-## Currently Supported
+## Support Overview
 
-- then (Action) Cards:
-  - Powerstates:
-    Power ON
-    Power OFF
-    Reboot Enigma2 Software
-    Reboot Receiver
-    Deep Standby (DANGER: after Triggering, no more Software Control possible)
-    send Command ID's to control Box
+### when / trigger flowcards
 
-  - Volume:
-    Mute
-    Unmute
-    Set Volume to Level (0-100)
+[ ] polling required, therefor currently not decided. If you like to put in arguments, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427)
 
-  - Messages:
-    Send all Types of Messages Format Type|Timeout|Message required!
+### and / condition flowcards
 
-## Currently planned
+[ ] Power is ON
+[ ] Power is OFF
+[ ] Radio mode is used
+[ ] TV mode is used
+[ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
 
-- When (Trigger) Cards
-  - currently i decide to get these integrated, as these needs Polling, this must me considered
+### then / action flowcards
 
-- and (Condition) Cards
-  - there are a few Ideas that will be considered (THX to Athom Community)
+[x] deep standby mode
+[x] reboot enigma2 software
+[x] reboot receiver
+[x] send command as ID (see below for Info)
+[x] send message
+[x] standby mode
+[x] standby wake
+[ ] Volume decrease by X steps
+[ ] Volume increase by X steps
+[x] Volume mute
+[x] Volume set (0% - 100%)
+[x] Volume unmute
+[ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
 
-- then (Action) Cards:
-  - Volume: Increase Volume by x Times, decrease Volume by x Times
+## Messages
+
+During the Input you need to make sure you follow these Format:
+    Type|Timeout|Message
+inbetween the different Sections no Spaces are required.
+Here are the different Supported Variables:
+Type:
+  - 0 = Yes / No (currently only Display, no action yet implemented)
+  - 1 = Info Message
+  - 2 = Plain Message
+  - 3 = Attention Message
+Timeout:
+  - set it to 0 to be endless displayed or Provide Time in seconds
+Message:
+  - Type your Text here, to make a new line use \n in the Text without a Space afterwards.
 
 ## For Supported Devices check the following
 
