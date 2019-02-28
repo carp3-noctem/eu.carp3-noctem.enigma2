@@ -24,7 +24,7 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 
 ### then / action flowcards
 
-- [x] [deep standby mode]()
+- [x] [deep standby mode](#deep-standby-mode)
 - [x] reboot enigma2 software
 - [x] reboot receiver
 - [x] send command as ID (see below for Info)
