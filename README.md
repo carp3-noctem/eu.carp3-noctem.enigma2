@@ -71,6 +71,10 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
+## Version 0.0.7
+
+- Update to enable Homey Firmware 1.5.13 for testing
+
 ## Version 0.0.6
 
 - reorder of then / action flowcards

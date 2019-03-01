@@ -6,11 +6,11 @@
   "description": {
     "en": "Connect your Homey with enigma2 Receivers"
   },
-  "version": "0.0.6",
+  "version": "0.0.7",
   "brandColor": "#E3B30B",
   "homeyCommunityTopicId": 9427,
   "sdk": 2,
-  "compatibility": ">=2.0.0",
+  "compatibility": ">=1.5.13",
   "category": [
     "video"
   ],
