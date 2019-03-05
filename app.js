@@ -7,6 +7,14 @@ const enigma2_IP = Homey.ManagerSettings.get('enigma2_ip');
 const enigma2_Port = Homey.ManagerSettings.get('enigma2_port');
 var enigma2Host = enigma2_IP + ':' + enigma2_Port;
 
+//Homey Requirement
+class enigma2 extends Homey.App {
+	onInit() {
+		this.log(Homey.__("appLogStart"));
+	}
+}
+
+
 // Start Volume
 // Function Volume Control
 function VolumeControl(Volume) {
@@ -177,7 +185,7 @@ sendCommandAction
 function sendMessage(msg_txt, msg_type, msg_timeout) {
 	var msg_code = "http://"+ enigma2Host + "/web/message?text=" + msg_txt + "&type=" + msg_type + "&timeout=" + msg_timeout;
 	var options={
-		url: 'http://' + enigma2Host + '/web/message?text=' + msg_txt + '&type=' + msg_type + '&timeout=' + msg_timeout,
+		url: 'http://' + enigma2Host + '/wb/message?text=' + msg_txt + '&type=' + msg_type + '&timeout=' + msg_timeout,
 		headers: { enigma2Host }
 	};
 	function callback(error, response, body){
@@ -209,12 +217,5 @@ sendMessageAction
 });
 
 // Send Message End
-
-
-class enigma2 extends Homey.App {
-	onInit() {
-		this.log(Homey.__("appLogStart"));
-	}
-}
 
 module.exports = enigma2;
