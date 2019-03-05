@@ -77,6 +77,10 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
+## Version 0.1.0
+
+- Better Log for Alpha Version (all actions will be loged)
+
 ## Version 0.0.9
 
 - APPSTORE.md implemented, due to false handling of Markdown at Athom Appstore

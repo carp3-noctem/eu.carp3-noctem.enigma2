@@ -4,13 +4,14 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 
 ## Requirements
 
-1) [openWebif](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif) needs to be available on the device
-2) Setup of enigma2 App via [Homey](https://www.athom.com/en/) required.
+- [openWebif](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif) needs to be available on the device
+- Setup of enigma2 App via [Homey](https://www.athom.com/en/) required.
    Start Homey App, open the More section, select Apps Menu, open enigma2 entry and Click on "Configure app"
 
 ## Support Overview
 
 [ ] = not yet supported
+
 [x] = support available
 
 ### when / trigger flowcards
@@ -20,31 +21,49 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 ### and / condition flowcards
 
 [ ] Power is ON
+
 [ ] Power is OFF
+
 [ ] Radio mode is used
+
 [ ] TV mode is used
+
 [ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
 
 ### then / action flowcards
 
 [x] deep standby mode -> ATTENTION: see below
+
 [x] reboot enigma2 software
+
 [x] reboot receiver
+
 [x] send command as ID (see below for Info)
+
 [x] send message  -> ATTENTION: see below
+
 [x] standby mode
+
 [x] standby wake
+
 [ ] Volume decrease by X steps
+
 [ ] Volume increase by X steps
+
 [x] Volume mute
+
 [x] Volume set (0% - 100%)
+
 [x] Volume unmute
+
 [ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
 
 ### Supported Languages
 
 [ ] dutch [Contribute here](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) or file a pull request on GitHub
+
 [x] english
+
 [x] german
 
 ## deep standby mode
@@ -82,3 +101,4 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 
 
+.
