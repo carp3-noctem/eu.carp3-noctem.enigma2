@@ -40,7 +40,7 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 
 ### Supported Languages
 
-- [ ] dutch [Contribute here](ttps://community.athom.com/t/enigma2-dvb-boxes-support/9427) or file a pull request on GitHub
+- [ ] dutch [Contribute here](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) or file a pull request on GitHub
 - [x] english
 - [x] german
 
