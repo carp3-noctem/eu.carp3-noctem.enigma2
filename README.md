@@ -67,7 +67,7 @@ Message:
 
 ## For Supported Devices check the following
 
-Due to limited access to all enigma2 enabled devices, i was only able to test the functions at an Dreambox 800HDse and a few less on an VU+ duo2, if any Issues are observed, please file an Issue on GitHub.
+Due to limited access to all enigma2 enabled devices, i was only able to test the functions at an Dreambox 800HDse and a few less on an VU+ duo2, if any Issues are observed, please file an Issue on [GitHub](https://github.com/carp3-noctem/eu.carp3-noctem.enigma2/issues) or Post to the [Athom Community Forum Topic](https://community.athom.com/t/enigma2-dvb-boxes-support/9427).
 
 1. Check Google Spreadsheet: [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1DlcXXRLvs-AKHAxlF2KolwLmICR3OC4liS-9Cn0K48c/edit?usp=sharing)
    Green = Fully Supported  

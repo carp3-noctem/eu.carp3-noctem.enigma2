@@ -18,6 +18,7 @@ function VolumeControl(Volume) {
 		if (!error && response.statusCode == 200){
 		}
 		else {
+			console.log('Following Error occured when Fuction VolumeControl was called: \n Call used: http://'+enigma2Host+'/web/vol?set='+Volume+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 			}
 	}
 	request(options, callback);
@@ -38,6 +39,7 @@ function VolumeControlMute (e2ismuted) {
 			VolumeControl('up')
 		  }
 		  else {
+				console.log('Following Error occured when Fuction VolumeControlMute was called: \nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 			}
 		}
 	  }
@@ -89,6 +91,9 @@ function checkPowerState(powerstate) {
 			if (powerstate === 'OFF' && body.indexOf('false') !== -1) {
 				sendCommandID('powerstate?newstate=0');
 			}
+		}
+		else {
+			console.log('Following Error occured when Fuction checkPowerState was called: \n Call used: http://'+enigma2Host+'/web/'+sendCommandID+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 		}
 	}
 	request(options, callback);
@@ -150,6 +155,7 @@ function sendCommandID(commandID) {
 		if (!error && response.statusCode == 200) {
 			}
 	else {
+		console.log('Following Error occured when Fuction sendCommandID was called: \n Call used: http://'+enigma2Host+'/web/'+commandID+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 		}
 	}
 	request(options, callback);
@@ -176,6 +182,9 @@ function sendMessage(msg_txt, msg_type, msg_timeout) {
 	};
 	function callback(error, response, body){
 		if (!error && response.statusCode == 200){
+		}
+		else {
+			console.log('Following Error occured when Fuction senMessage was called: \n Call used: http://'+ enigma2Host + '/web/message?text=' + msg_txt + '&type=' + msg_type + '&timeout=' + msg_timeout+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 		}
 	}
 	request(options, callback);

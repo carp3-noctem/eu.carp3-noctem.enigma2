@@ -4,11 +4,14 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 
 ## Requirements
 
-1) [openWebif](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif) needs to be available on the enigma2 device
+1) [openWebif](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif) needs to be available on the device
 2) Setup of enigma2 App via [Homey](https://www.athom.com/en/) required.
    Start Homey App, open the More section, select Apps Menu, open enigma2 entry and Click on "Configure app"
 
 ## Support Overview
+
+[ ] = not yet supported
+[x] = support available
 
 ### when / trigger flowcards
 
@@ -67,7 +70,7 @@ Message:
 
 ## For Supported Devices check the following
 
-Due to limited access to all enigma2 enabled devices, i was only able to test the functions at an Dreambox 800HDse and a few less on an VU+ duo2, if any Issues are observed, please file an Issue on GitHub.
+Due to limited access to all enigma2 enabled devices, i was only able to test the functions at an Dreambox 800HDse and a few less on an VU+ duo2, if any Issues are observed, please file an Issue on [GitHub](https://github.com/carp3-noctem/eu.carp3-noctem.enigma2/issues) or Post to the [Athom Community Forum Topic](https://community.athom.com/t/enigma2-dvb-boxes-support/9427).
 
 1. Check Google Spreadsheet: [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1DlcXXRLvs-AKHAxlF2KolwLmICR3OC4liS-9Cn0K48c/edit?usp=sharing)
    Green = Fully Supported  
@@ -75,42 +78,7 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 2. Pictures of the Boxes can be found here: [OpenWebif Box Pictures](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/tree/master/plugin/public/images/boxes)
 3. Pictures of the Remotes can be found here: [OpenWebif Remote Pictures](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/tree/master/plugin/public/images/remotes)
 
-## Changelog
-
-## Version 0.0.8
-
-- German Language Support added
-
-## Version 0.0.7
-
-- Update to enable Homey Firmware 1.5.13 for testing
-
-## Version 0.0.6
-
-- reorder of then / action flowcards
-- redo README.md for better overview
-
-## Version 0.0.5
-
-- Added Message Function (special Format required for Text Input!)
-- Corrected Type at send Box to Standby Function
-
-## Version 0.0.4
-
-- Updated Web Adresses to Human readable short URL's
-
-## Version 0.0.3
-
-- Added Send CommandID via then / Action Flowcard for Supported ID's visit [http://enigma2.carpe3-noctem.eu](http://enigma2.carpe3-noctem.eu)
-
-## Version 0.0.2
-
-- Changed From Athom Forum to Community Topic
-
-## Version 0.0.1
-
-- Initial Release
 
 
 
-.
+
