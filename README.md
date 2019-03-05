@@ -77,6 +77,11 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
+## Version 0.0.9
+
+- APPSTORE.md implemented, due to false handling of Markdown at Athom Appstore
+- console.log Output for wrong calls implemented
+
 ## Version 0.0.8
 
 - German Language Support added

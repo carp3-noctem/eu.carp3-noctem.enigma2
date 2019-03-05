@@ -6,7 +6,7 @@
   "description": {
     "en": "Connect your Homey with enigma2 Receivers"
   },
-  "version": "0.0.8",
+  "version": "0.0.9",
   "brandColor": "#E3B30B",
   "homeyCommunityTopicId": 9427,
   "sdk": 2,
