@@ -12,6 +12,6 @@
         "info_ipadress": "IP-Adresse: ",
         "info_ipadress_body": "Am Receiver die folgenen Menüs öffnen&#58;<br>Hauptmenü<br>Einstellungen<br>System<br>Netzwerk<br>Adapter-Einstellungen<br>Unter Aktuelle Einstellungen findet siche die IP-Adresse",
         "info_port": "Port: ",
-        "info_port_body": "Wenn nichts geändert wurde, dann sollte der Port:<br>80<br>or<br>8080<br>je nachdem welcher Receiver genutzt wird.<br>Um zu überprüfen, welcher Port genutzt wird, die IP-Adresse in die Adresszeile eines Browsers tippen, wenn sich nun das WebIf öffnet, dann wird Port 80 verwendet.<br>Wenn eine Fehlerseite angezeigt wird, dann die IP-Adresse gefolgt von &#58;8080 eingeben, zeigt dies das WebIf dann wird Port 8080 verwendet.<br>Sollte dies auch kein WebIf zeigen, dann bitte die Konfiguration des Plugins überprüfen.",
+        "info_port_body": "Wenn nichts geändert wurde, dann sollte der Port:<br>80<br>or<br>8080<br>je nachdem welcher Receiver genutzt wird.<br>Um zu überprüfen, welcher Port genutzt wird, die IP-Adresse in die Adresszeile eines Browsers tippen, wenn sich nun das WebIf öffnet, dann wird Port 80 verwendet.<br>Wenn eine Fehlerseite angezeigt wird, dann die IP-Adresse gefolgt von &#58;8080 eingeben, zeigt dies das WebIf dann wird Port 8080 verwendet.<br>Sollte dies auch kein WebIf zeigen, dann bitte die Konfiguration des Plugins überprüfen."
     }
 }
