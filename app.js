@@ -18,36 +18,41 @@ class enigma2 extends Homey.App {
 // Start Volume
 // Function Volume Control
 function VolumeControl(Volume) {
+	var volumeControl_call = ('http://' + enigma2Host + '/web/vol?set=' + Volume);
 	var options = {
-		url: 'http://' + enigma2Host + '/web/vol?set=' + Volume,
+		url: volumeControl_call,
 		headers: { enigma2Host }
 	};
 	function callback(error, response, body) {
 		if (!error && response.statusCode == 200){
+			console.log('Following Call was made successfully(Volume): \n'+volumeControl_call);
 		}
 		else {
-			console.log('Following Error occured when Fuction VolumeControl was called: \n Call used: http://'+enigma2Host+'/web/vol?set='+Volume+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
+			console.log('Following Error occured when Fuction VolumeControl was called: \n Call used:'+volumeControl_call+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 			}
 	}
 	request(options, callback);
 }
 // Function Mute Control 
 function VolumeControlMute (e2ismuted) {
+	var volumeMute_call = ('http://' + enigma2Host + '/web/vol');
 	var options = {
-		url: 'http://' + enigma2Host + '/web/vol',
+		url: volumeMute_call,
 		headers: { enigma2Host }
 	  };
 	  function callback(error, response, body) {
 		if (!error && response.statusCode == 200) {
 		  if (e2ismuted === 'mute' && body.indexOf('False') !== -1) {
-			  VolumeControl('mute')
+				VolumeControl('mute')
+				console.log('Following Call was made successfully(mute): \n'+volumeMute_call);
 		  }
 		  if (e2ismuted === 'unmute' && body.indexOf('True') !== -1) {
 			VolumeControl('down');
-			VolumeControl('up')
+			VolumeControl('up');
+			console.log('Following Call was made successfully(unmute): \n'+volumeMute_call);
 		  }
 		  else {
-				console.log('Following Error occured when Fuction VolumeControlMute was called: \nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
+				console.log('Following Error occured when Fuction VolumeControlMute was called: \nCall used: '+volumeMute_call+' \nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 			}
 		}
 	  }
@@ -87,21 +92,24 @@ setVolumeAction
 // Start Power Control
 // Function Power On / Off decision
 function checkPowerState(powerstate) {
+	var checkPower_call = ('http://' + enigma2Host + '/web/powerstate');
 	var options = {
-		url: 'http://' + enigma2Host + '/web/powerstate',
+		url: checkPower_call,
 		headers: { enigma2Host }
 	};
 	function callback(error, response, body) {
 		if (!error && response.statusCode == 200) {
 			if (powerstate === 'ON' && body.indexOf('true') !== -1) {
 				sendCommandID('powerstate?newstate=0');
+				console.log('Following Call was made successfully(Power ON = true): \n'+checkPower_call);
 			}
 			if (powerstate === 'OFF' && body.indexOf('false') !== -1) {
 				sendCommandID('powerstate?newstate=0');
+				console.log('Following Call was made successfully(Power ON = false): \n'+checkPower_call);
 			}
 		}
 		else {
-			console.log('Following Error occured when Fuction checkPowerState was called: \n Call used: http://'+enigma2Host+'/web/'+sendCommandID+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
+			console.log('Following Error occured when Fuction checkPowerState was called: \n Call used: '+checkPower_call+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 		}
 	}
 	request(options, callback);
@@ -155,15 +163,17 @@ powerstateSendToDeepStandbyAction
 // Command ID Send Start
 // Function Command ID
 function sendCommandID(commandID) {
+	var command_call = ('http://' + enigma2Host + '/web/' + commandID);
 	var options = {
-		url: 'http://' + enigma2Host + '/web/' + commandID,
+		url: command_call,
 		headers: { enigma2Host }
 	};
 	function callback(error, response, body) {
 		if (!error && response.statusCode == 200) {
+			console.log('Following Call was made successfully: \n'+command_call);
 			}
 	else {
-		console.log('Following Error occured when Fuction sendCommandID was called: \n Call used: http://'+enigma2Host+'/web/'+commandID+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
+		console.log('Following Error occured when Fuction sendCommandID was called: \n Call used: '+command_call+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 		}
 	}
 	request(options, callback);
@@ -183,16 +193,17 @@ sendCommandAction
 // Send Message Start
 // Function send Message
 function sendMessage(msg_txt, msg_type, msg_timeout) {
-	var msg_code = "http://"+ enigma2Host + "/web/message?text=" + msg_txt + "&type=" + msg_type + "&timeout=" + msg_timeout;
+	var msg_call = ("http://"+ enigma2Host + "/web/message?text=" + msg_txt + "&type=" + msg_type + "&timeout=" + msg_timeout);
 	var options={
-		url: 'http://' + enigma2Host + '/web/message?text=' + msg_txt + '&type=' + msg_type + '&timeout=' + msg_timeout,
+		url: msg_call,
 		headers: { enigma2Host }
 	};
 	function callback(error, response, body){
 		if (!error && response.statusCode == 200){
+			console.log('Following Call was made successfully: \n'+msg_call);
 		}
 		else {
-			console.log('Following Error occured when Fuction senMessage was called: \n Call used: http://'+ enigma2Host + '/web/message?text=' + msg_txt + '&type=' + msg_type + '&timeout=' + msg_timeout+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
+			console.log('Following Error occured when Fuction sendMessage was called: \n Call used: '+ msg_code + '\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
 		}
 	}
 	request(options, callback);
