@@ -185,7 +185,7 @@ sendCommandAction
 function sendMessage(msg_txt, msg_type, msg_timeout) {
 	var msg_code = "http://"+ enigma2Host + "/web/message?text=" + msg_txt + "&type=" + msg_type + "&timeout=" + msg_timeout;
 	var options={
-		url: 'http://' + enigma2Host + '/wb/message?text=' + msg_txt + '&type=' + msg_type + '&timeout=' + msg_timeout,
+		url: 'http://' + enigma2Host + '/web/message?text=' + msg_txt + '&type=' + msg_type + '&timeout=' + msg_timeout,
 		headers: { enigma2Host }
 	};
 	function callback(error, response, body){
