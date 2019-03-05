@@ -38,6 +38,12 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 - [x] Volume unmute
 - [ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
 
+### Supported Languages
+
+- [ ] dutch [Contribute here](ttps://community.athom.com/t/enigma2-dvb-boxes-support/9427) or file a pull request on GitHub
+- [x] english
+- [x] german
+
 ## deep standby mode
 
 **WARNING:**
@@ -70,6 +76,10 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 3. Pictures of the Remotes can be found here: [OpenWebif Remote Pictures](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/tree/master/plugin/public/images/remotes)
 
 ## Changelog
+
+## Version 0.0.8
+
+- German Language Support added
 
 ## Version 0.0.7
 
