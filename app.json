@@ -42,6 +42,62 @@
       "ENIGMA",
       "LINUX",
       "VERU"
+    ],
+    "nl": [
+      "enigma2",
+      "DVB",
+      "DVB-S2",
+      "Receiver",
+      "AB-COM",
+      "IPBOX",
+      "PRISMCUBE",
+      "ANADOL",
+      "AX TECHNOLOGY",
+      "AX",
+      "DREAMBOX",
+      "DREAMMULTIMEDIA",
+      "EDISON",
+      "FORMULER",
+      "GIGABLUE",
+      "MEDI@LINK",
+      "OCTAGON",
+      "OPTICUM",
+      "PROTEK",
+      "RED EAGLE",
+      "REDLINE",
+      "SPYCAT",
+      "VU+",
+      "ENIGMA",
+      "LINUX",
+      "VERU"
+    ],
+    "de": [
+      "enigma2",
+      "DVB",
+      "DVB-S2",
+      "Receiver",
+      "AB-COM",
+      "IPBOX",
+      "PRISMCUBE",
+      "ANADOL",
+      "AX TECHNOLOGY",
+      "AX",
+      "DREAMBOX",
+      "DREAMMULTIMEDIA",
+      "EDISON",
+      "FORMULER",
+      "GIGABLUE",
+      "MEDI@LINK",
+      "OCTAGON",
+      "OPTICUM",
+      "PROTEK",
+      "RED EAGLE",
+      "REDLINE",
+      "SPYCAT",
+      "VU+",
+      "ENIGMA",
+      "LINUX",
+      "VERU"
     ]
   },
   "author": {
@@ -71,31 +127,37 @@
     {
       "id": "powerstate_deepStandy",
       "title": {
-        "en": "deep standby mode"
+        "en": "deep standby mode",
+        "de": "Tiefschlaf modus"
       },
       "hint": {
-        "en": "No Software Control will be possible, after executing of this Command!"
+        "en": "No Software Control will be possible, after executing of this Command!",
+        "de": "Nach dem ausführen dieses Kommandos wird keine weitere Software Kontrolle möglich sein!"
       }
     },
     {
       "id": "powerstate_restart_e2",
       "title": {
-        "en": "reboot enigma2 software"
+        "en": "reboot enigma2 software",
+        "de": "Neustart enigma2 Software"
       }
     },
     {
       "id": "powerstate_rebootBox",
       "title": {
-        "en": "reboot receiver"
+        "en": "reboot receiver",
+        "de": "Neustart Receiver"
       }
     },
     {
       "id": "command_send",
       "title": {
-        "en": "send command as ID"
+        "en": "send command as ID",
+        "de": "Kontrollbefehl als ID senden"
       },
       "hint": {
-        "en": "For supported Command ID's please look at http://enigma2.carpe3-noctem.eu"
+        "en": "For supported Command ID's please look at http://enigma2.carpe3-noctem.eu",
+        "de": "Für unterstützte ID's bitte unter http://enigma2.carpe3-noctem.eu schauen"
       },
       "args": [
         {
@@ -103,7 +165,8 @@
           "type": "number",
           "step": 1,
           "placeholder": {
-            "en": "command ID"
+            "en": "command ID",
+            "de": "Befehls ID"
           }
         }
       ]
@@ -111,17 +174,20 @@
     {
       "id": "message_send",
       "title": {
-        "en": "send message"
+        "en": "send message",
+        "de": "Nachricht versenden"
       },
       "hint": {
-        "en": "Message needs the following format: \n\nType|Timeout|Text \n\nTypes: \n0 = YES / NO \n1 = INFO \n2 = MESSAGE \n3 = ATTENTION \nTimeout = Seconds or 0 for endless display \nMessage = Your Text"
+        "en": "Message needs the following format: \n\nType|Timeout|Text \n\nTypes: \n0 = YES / NO question \n1 = Info \n2 = MESSAGE \n3 = ATTENTION \nTimeout = Seconds or 0 for endless display \nMessage = Your Text",
+        "de": "Nachrichten müssen im folgenden Format eingegeben werden: \n\nTyp|Anzeigezeit|Text \n\nTyp: \n0 = Ja / Nein Frage \n1 = Information \n2 = Nachricht \n 3 = Warnung \nAnzeigezeit = Sekunden oder 0 für dauerhaft \nMessage = Nachrichtentext"
       },
       "args": [
         {
           "name": "msg_text_full",
           "type": "text",
           "placeholder": {
-            "en": "Message Text"
+            "en": "Message Text",
+            "de": "Nachrichten Text"
           }
         
         }
@@ -130,25 +196,29 @@
     {
       "id": "powerstate_off",
       "title": {
-        "en": "standby mode"
+        "en": "standby mode",
+        "de": "standby einleiten"
       }
     },
     {
       "id": "powerstate_on",
       "title": {
-        "en": "standby wake"
+        "en": "standby wake",
+        "de": "standby verlassen"
       }
     },
     {
       "id": "vol_mute",
       "title": {
-        "en": "Volume mute"
+        "en": "Volume mute",
+        "de": "Lautstärke stumm"
       }
     },
     {
       "id": "vol_set",
       "title": {
-        "en": "set Volume to (0-100)"
+        "en": "set Volume to (0-100)",
+        "de": "Lautstärke festlegen (0-100)"
       },
       "args": [
         {
@@ -158,7 +228,8 @@
           "max": 100,
           "step": 1,
           "placeholder": {
-            "en": "Volume set (0% - 100%)"
+            "en": "Volume set (0% - 100%)",
+            "de": "Lautstärke festlegen (0% - 100%)"
           }
         }
       ]
@@ -166,7 +237,8 @@
     {
       "id": "vol_unmute",
       "title": {
-        "en": "Volume unmute"
+        "en": "Volume unmute",
+        "de": "Lautstärke stumm aufheben"
       }
     }
   ]
