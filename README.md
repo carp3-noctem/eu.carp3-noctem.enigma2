@@ -31,8 +31,6 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 - [x] [send message](#messages)
 - [x] standby mode
 - [x] standby wake
-- [ ] Volume decrease by X steps
-- [ ] Volume increase by X steps
 - [x] Volume mute
 - [x] Volume set (0% - 100%)
 - [x] Volume unmute
@@ -76,6 +74,10 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 3. Pictures of the Remotes can be found here: [OpenWebif Remote Pictures](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/tree/master/plugin/public/images/remotes)
 
 ## Changelog
+
+## Version 0.1.1
+
+- App is now in Beta
 
 ## Version 0.1.0
 

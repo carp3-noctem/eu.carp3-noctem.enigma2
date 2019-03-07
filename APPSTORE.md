@@ -46,10 +46,6 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 
 [x] standby wake
 
-[ ] Volume decrease by X steps
-
-[ ] Volume increase by X steps
-
 [x] Volume mute
 
 [x] Volume set (0% - 100%)
