@@ -54,14 +54,19 @@ During the Input you need to make sure you follow these Format:
 inbetween the different Sections no Spaces are required.
 Here are the different Supported Variables:
 Type:
-  - 0 = Yes / No (currently only Display, no action yet implemented)
-  - 1 = Info Message
-  - 2 = Plain Message
-  - 3 = Attention Message
+
+- 0 = Yes / No (currently only Display, no action yet implemented)
+- 1 = Info Message
+- 2 = Plain Message
+- 3 = Attention Message
+
 Timeout:
-  - set it to 0 to be endless displayed or Provide Time in seconds
+
+- set it to 0 to be endless displayed or Provide Time in seconds
+
 Message:
-  - Type your Text here, to make a new line use \n in the Text without a Space afterwards.
+
+- Type your Text here, to make a new line use \n in the Text without a Space afterwards.
 
 ## For Supported Devices check the following
 
@@ -75,10 +80,14 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
-## Version 0.1.2
+## Version 0.1.5
+
+- rewrite of function handling
+- erased message code error
+
+## Version 0.1.1
 
 - App is now in Beta
-- Text Alpha to Beta changed
 
 ## Version 0.1.0
 
