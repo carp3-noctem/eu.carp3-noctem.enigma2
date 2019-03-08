@@ -75,9 +75,10 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
-## Version 0.1.1
+## Version 0.1.2
 
 - App is now in Beta
+- Text Alpha to Beta changed
 
 ## Version 0.1.0
 
