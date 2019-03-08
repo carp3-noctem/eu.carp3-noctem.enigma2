@@ -125,31 +125,6 @@
   "flow": {
   "actions": [
     {
-      "id": "powerstate_deepStandy",
-      "title": {
-        "en": "deep standby mode",
-        "de": "Tiefschlaf modus"
-      },
-      "hint": {
-        "en": "No Software Control will be possible, after executing of this Command!",
-        "de": "Nach dem ausführen dieses Kommandos wird keine weitere Software Kontrolle möglich sein!"
-      }
-    },
-    {
-      "id": "powerstate_restart_e2",
-      "title": {
-        "en": "reboot enigma2 software",
-        "de": "Neustart enigma2 Software"
-      }
-    },
-    {
-      "id": "powerstate_rebootBox",
-      "title": {
-        "en": "reboot receiver",
-        "de": "Neustart Receiver"
-      }
-    },
-    {
       "id": "command_send",
       "title": {
         "en": "send command as ID",
@@ -194,10 +169,28 @@
       ]
     },
     {
-      "id": "powerstate_off",
+      "id": "powerstate_deepstandby",
       "title": {
-        "en": "standby mode",
-        "de": "standby einleiten"
+        "en": "deep standby mode",
+        "de": "Tiefschlaf modus"
+      },
+      "hint": {
+        "en": "No Software Control will be possible, after executing of this Command!",
+        "de": "Nach dem ausführen dieses Kommandos wird keine weitere Software Kontrolle möglich sein!"
+      }
+    },
+    {
+      "id": "powerstate_reboot",
+      "title": {
+        "en": "reboot receiver",
+        "de": "Neustart Receiver"
+      }
+    },
+    {
+      "id": "powerstate_restart_enigma2",
+      "title": {
+        "en": "reboot enigma2 software",
+        "de": "Neustart enigma2 Software"
       }
     },
     {
@@ -208,10 +201,10 @@
       }
     },
     {
-      "id": "vol_mute",
+      "id": "powerstate_off",
       "title": {
-        "en": "Volume mute",
-        "de": "Lautstärke stumm"
+        "en": "standby mode",
+        "de": "standby einleiten"
       }
     },
     {
@@ -233,6 +226,13 @@
           }
         }
       ]
+    },
+    {
+      "id": "vol_mute",
+      "title": {
+        "en": "Volume mute",
+        "de": "Lautstärke stumm"
+      }
     },
     {
       "id": "vol_unmute",
