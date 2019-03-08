@@ -65,51 +65,65 @@ sendMessageAction
 });
 
 // Powerstate Flowcards
+// and / condition Flowcards
+// Powerstate
+//let powerCondition = new Homey.FlowCardCondition('powered');
+//powerCondition
+//	.register()
+//	.registerRunListener((args, state ) => {
+//		var call_spec =('powerstate');
+//		call_enigma2(call_spec);
+//		request(options, callback);
+//		if (!error && response.statusCode == 200){
+//			console.log('Previous Call was made successfully.');
+//		}
+//	
+//});
 // then / action Flowcards
 // Deepstandby
 let powerstateONAction = new Homey.FlowCardAction('powerstate_deepstandby');
 powerstateONAction
-.register()
-.registerRunListener((args) => {
-	var call_spec = ('powerstate?newstate=1');
-	call_enigma2(call_spec);
-	return true;
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=1');
+		call_enigma2(call_spec);
+		return true;
 });
 // Reboot
 let powerstateRebootAction = new Homey.FlowCardAction('powerstate_reboot');
 powerstateRebootAction
-.register()
-.registerRunListener((args) => {
-	var call_spec = ('powerstate?newstate=2');
-	call_enigma2(call_spec);
-	return true;
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=2');
+		call_enigma2(call_spec);
+		return true;
 });
 // Restart Enigma2
 let powerstateReboot_e2Action = new Homey.FlowCardAction('powerstate_restart_enigma2');
 powerstateReboot_e2Action
-.register()
-.registerRunListener((args) => {
-	var call_spec = ('powerstate?newstate=3');
-	call_enigma2(call_spec);
-	return true;
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=3');
+		call_enigma2(call_spec);
+		return true;
 });
 // Wakeup from Standby
 let powerstateWakeupAction = new Homey.FlowCardAction('powerstate_on');
 powerstateWakeupAction
-.register()
-.registerRunListener((args) => {
-	var call_spec = ('powerstate?newstate=4');
-	call_enigma2(call_spec);
-	return true;
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=4');
+		call_enigma2(call_spec);
+		return true;
 });
 // standby
 let powerstateStandbyAction = new Homey.FlowCardAction('powerstate_off');
 powerstateStandbyAction
-.register()
-.registerRunListener((args) => {
-	var call_spec = ('powerstate?newstate=5');
-	call_enigma2(call_spec);
-	return true;
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=5');
+		call_enigma2(call_spec);
+		return true;
 });
 
 // Volume Flowcards
@@ -117,31 +131,31 @@ powerstateStandbyAction
 // set Volume to X
 let volSetAction = new Homey.FlowCardAction('vol_set');
 volSetAction
-.register()
-.registerRunListener((args) => {
-	var call_spec = ('vol?set=set'+args.volume);
-	call_enigma2(call_spec);
-	return true;
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('vol?set=set'+args.volume);
+		call_enigma2(call_spec);
+		return true;
 });
 // Volume mute
-let volMuteAction = new Homey.FlowCardAction('vol_Mute');
+let volMuteAction = new Homey.FlowCardAction('vol_mute');
 volMuteAction
-.register()
-.registerRunListener((args) => {
-	var call_spec = ('vol?set=mute');
-	call_enigma2(call_spec);
-	return true;
-});
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('vol?set=mute');
+		call_enigma2(call_spec);
+		return true;
+	});
 // Volume unmute
 let volUnmuteAction = new Homey.FlowCardAction('vol_unmute');
 volUnmuteAction
-.register()
-.registerRunListener((args) => {
-	var call_spec = ('vol?set=down');
-	call_enigma2(call_spec);
-	var call_spec = ('vol?set=up');
-	call_enigma2(call_spec);
-	return true;
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('vol?set=down');
+		call_enigma2(call_spec);
+		var call_spec = ('vol?set=up');
+		call_enigma2(call_spec);
+		return true;
 });
 
 module.exports = enigma2;
