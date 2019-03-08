@@ -67,7 +67,7 @@ sendMessageAction
 // Powerstate Flowcards
 // and / condition Flowcards
 // Powerstate
-//let powerCondition = new Homey.FlowCardCondition('powered');
+//let powerCondition = new Homey.FlowCardCondition('isPowered');
 //powerCondition
 //	.register()
 //	.registerRunListener((args, state ) => {
@@ -75,7 +75,9 @@ sendMessageAction
 //		call_enigma2(call_spec);
 //		request(options, callback);
 //		if (!error && response.statusCode == 200){
-//			console.log('Previous Call was made successfully.');
+//			if (body.indexOf('false')){
+//				
+//			}
 //		}
 //	
 //});

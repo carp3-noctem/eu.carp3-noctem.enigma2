@@ -75,6 +75,11 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
+## Version 0.1.5
+
+- rewrite of function handling
+- erased message code error
+
 ## Version 0.1.1
 
 - App is now in Beta
