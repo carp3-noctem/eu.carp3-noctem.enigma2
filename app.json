@@ -6,7 +6,7 @@
   "description": {
     "en": "Connect your Homey with enigma2 Receivers"
   },
-  "version": "0.1.2",
+  "version": "0.1.5",
   "brandColor": "#E3B30B",
   "homeyCommunityTopicId": 9427,
   "sdk": 2,
@@ -123,124 +123,125 @@
     "request": "^2.81.0"
   },
   "flow": {
-  "actions": [
-    {
-      "id": "powerstate_deepStandy",
-      "title": {
-        "en": "deep standby mode",
-        "de": "Tiefschlaf modus"
-      },
-      "hint": {
-        "en": "No Software Control will be possible, after executing of this Command!",
-        "de": "Nach dem ausführen dieses Kommandos wird keine weitere Software Kontrolle möglich sein!"
-      }
-    },
-    {
-      "id": "powerstate_restart_e2",
-      "title": {
-        "en": "reboot enigma2 software",
-        "de": "Neustart enigma2 Software"
-      }
-    },
-    {
-      "id": "powerstate_rebootBox",
-      "title": {
-        "en": "reboot receiver",
-        "de": "Neustart Receiver"
-      }
-    },
-    {
-      "id": "command_send",
-      "title": {
-        "en": "send command as ID",
-        "de": "Kontrollbefehl als ID senden"
-      },
-      "hint": {
-        "en": "For supported Command ID's please look at http://enigma2.carpe3-noctem.eu",
-        "de": "Für unterstützte ID's bitte unter http://enigma2.carpe3-noctem.eu schauen"
-      },
-      "args": [
-        {
-          "name": "command",
-          "type": "number",
-          "step": 1,
-          "placeholder": {
-            "en": "command ID",
-            "de": "Befehls ID"
+    
+    "actions": [
+      {
+        "id": "command_send",
+        "title": {
+          "en": "send command as ID",
+          "de": "Kontrollbefehl als ID senden"
+        },
+        "hint": {
+          "en": "For supported Command ID's please look at http://enigma2.carpe3-noctem.eu",
+          "de": "Für unterstützte ID's bitte unter http://enigma2.carpe3-noctem.eu schauen"
+        },
+        "args": [
+          {
+            "name": "command",
+            "type": "number",
+            "step": 1,
+            "placeholder": {
+              "en": "command ID",
+              "de": "Befehls ID"
+            }
           }
-        }
-      ]
-    },
-    {
-      "id": "message_send",
-      "title": {
-        "en": "send message",
-        "de": "Nachricht versenden"
+        ]
       },
-      "hint": {
-        "en": "Message needs the following format: \n\nType|Timeout|Text \n\nTypes: \n0 = YES / NO question \n1 = Info \n2 = MESSAGE \n3 = ATTENTION \nTimeout = Seconds or 0 for endless display \nMessage = Your Text",
-        "de": "Nachrichten müssen im folgenden Format eingegeben werden: \n\nTyp|Anzeigezeit|Text \n\nTyp: \n0 = Ja / Nein Frage \n1 = Information \n2 = Nachricht \n 3 = Warnung \nAnzeigezeit = Sekunden oder 0 für dauerhaft \nMessage = Nachrichtentext"
-      },
-      "args": [
-        {
-          "name": "msg_text_full",
-          "type": "text",
-          "placeholder": {
-            "en": "Message Text",
-            "de": "Nachrichten Text"
+      {
+        "id": "message_send",
+        "title": {
+          "en": "send message",
+          "de": "Nachricht versenden"
+        },
+        "hint": {
+          "en": "Message needs the following format: \n\nType|Timeout|Text \n\nTypes: \n0 = YES / NO question \n1 = Info \n2 = MESSAGE \n3 = ATTENTION \nTimeout = Seconds or 0 for endless display \nMessage = Your Text",
+          "de": "Nachrichten müssen im folgenden Format eingegeben werden: \n\nTyp|Anzeigezeit|Text \n\nTyp: \n0 = Ja / Nein Frage \n1 = Information \n2 = Nachricht \n 3 = Warnung \nAnzeigezeit = Sekunden oder 0 für dauerhaft \nMessage = Nachrichtentext"
+        },
+        "args": [
+          {
+            "name": "msg_text_full",
+            "type": "text",
+            "placeholder": {
+              "en": "Message Text",
+              "de": "Nachrichten Text"
+            }
+          
           }
-        
-        }
-      ]
-    },
-    {
-      "id": "powerstate_off",
-      "title": {
-        "en": "standby mode",
-        "de": "standby einleiten"
-      }
-    },
-    {
-      "id": "powerstate_on",
-      "title": {
-        "en": "standby wake",
-        "de": "standby verlassen"
-      }
-    },
-    {
-      "id": "vol_mute",
-      "title": {
-        "en": "Volume mute",
-        "de": "Lautstärke stumm"
-      }
-    },
-    {
-      "id": "vol_set",
-      "title": {
-        "en": "set Volume to (0-100)",
-        "de": "Lautstärke festlegen (0-100)"
+        ]
       },
-      "args": [
-        {
-          "name": "volume",
-          "type": "number",
-          "min": 0,
-          "max": 100,
-          "step": 1,
-          "placeholder": {
-            "en": "Volume set (0% - 100%)",
-            "de": "Lautstärke festlegen (0% - 100%)"
-          }
+      {
+        "id": "powerstate_deepstandby",
+        "title": {
+          "en": "deep standby mode",
+          "de": "Tiefschlaf modus"
+        },
+        "hint": {
+          "en": "No Software Control will be possible, after executing of this Command!",
+          "de": "Nach dem ausführen dieses Kommandos wird keine weitere Software Kontrolle möglich sein!"
         }
-      ]
-    },
-    {
-      "id": "vol_unmute",
-      "title": {
-        "en": "Volume unmute",
-        "de": "Lautstärke stumm aufheben"
+      },
+      {
+        "id": "powerstate_reboot",
+        "title": {
+          "en": "reboot receiver",
+          "de": "Neustart Receiver"
+        }
+      },
+      {
+        "id": "powerstate_restart_enigma2",
+        "title": {
+          "en": "reboot enigma2 software",
+          "de": "Neustart enigma2 Software"
+        }
+      },
+      {
+        "id": "powerstate_on",
+        "title": {
+          "en": "standby wake",
+          "de": "standby verlassen"
+        }
+      },
+      {
+        "id": "powerstate_off",
+        "title": {
+          "en": "standby mode",
+          "de": "standby einleiten"
+        }
+      },
+      {
+        "id": "vol_set",
+        "title": {
+          "en": "set Volume to (0-100)",
+          "de": "Lautstärke festlegen (0-100)"
+        },
+        "args": [
+          {
+            "name": "volume",
+            "type": "number",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "placeholder": {
+              "en": "Volume set (0% - 100%)",
+              "de": "Lautstärke festlegen (0% - 100%)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "vol_mute",
+        "title": {
+          "en": "Volume mute",
+          "de": "Lautstärke stumm"
+        }
+      },
+      {
+        "id": "vol_unmute",
+        "title": {
+          "en": "Volume unmute",
+          "de": "Lautstärke stumm aufheben"
+        }
       }
-    }
-  ]
-}
+    ]
+  }
 }
