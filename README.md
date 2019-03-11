@@ -82,8 +82,8 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Version 0.1.6
 
-- first and / condition Flowcard implemented (isPowered)
-- deleted Version log up to 0.1.0 for better overview
+- NL Translation with thanks to Martin Timmermans
+- deleted Version log up to 0.1.0 for better overview (can be found under changelog_history.md)
 
 ## Version 0.1.5
 
