@@ -6,7 +6,7 @@
   "description": {
     "en": "Connect your Homey with enigma2 Receivers"
   },
-  "version": "0.1.5",
+  "version": "0.1.6",
   "brandColor": "#E3B30B",
   "homeyCommunityTopicId": 9427,
   "sdk": 2,
@@ -105,6 +105,13 @@
     "email": "app@carp3-noctem.eu",
     "website": "http://carp3-noctem.eu"
   },
+  "contributors": {
+    "translators": [
+        {
+            "name": "Martin Timmermans"
+        }
+    ]
+},
   "contributing": {
     "donate": {
       "paypal": {
@@ -129,11 +136,13 @@
         "id": "command_send",
         "title": {
           "en": "send command as ID",
-          "de": "Kontrollbefehl als ID senden"
+          "de": "Kontrollbefehl als ID senden",
+          "nl": "Opdracht als ID versturen"
         },
         "hint": {
           "en": "For supported Command ID's please look at http://enigma2.carpe3-noctem.eu",
-          "de": "Für unterstützte ID's bitte unter http://enigma2.carpe3-noctem.eu schauen"
+          "de": "Für unterstützte ID's bitte unter http://enigma2.carpe3-noctem.eu schauen",
+          "nl": "Voor ondersteunde command ID's kijk svp op http://enigma2.carpe3-noctem.eu"
         },
         "args": [
           {
@@ -142,7 +151,8 @@
             "step": 1,
             "placeholder": {
               "en": "command ID",
-              "de": "Befehls ID"
+              "de": "Befehls ID",
+              "nl": "command ID"
             }
           }
         ]
@@ -151,11 +161,13 @@
         "id": "message_send",
         "title": {
           "en": "send message",
-          "de": "Nachricht versenden"
+          "de": "Nachricht versenden",
+          "nl": "Bericht verstuurd"
         },
         "hint": {
           "en": "Message needs the following format: \n\nType|Timeout|Text \n\nTypes: \n0 = YES / NO question \n1 = Info \n2 = MESSAGE \n3 = ATTENTION \nTimeout = Seconds or 0 for endless display \nMessage = Your Text",
-          "de": "Nachrichten müssen im folgenden Format eingegeben werden: \n\nTyp|Anzeigezeit|Text \n\nTyp: \n0 = Ja / Nein Frage \n1 = Information \n2 = Nachricht \n 3 = Warnung \nAnzeigezeit = Sekunden oder 0 für dauerhaft \nMessage = Nachrichtentext"
+          "de": "Nachrichten müssen im folgenden Format eingegeben werden: \n\nTyp|Anzeigezeit|Text \n\nTyp: \n0 = Ja / Nein Frage \n1 = Information \n2 = Nachricht \n 3 = Warnung \nAnzeigezeit = Sekunden oder 0 für dauerhaft \nMessage = Nachrichtentext",
+          "nl": "Berichten dienen in het volgende formaat te zijn: \n\nType|Timeout|Tekst \n\nTypen: \n0 = JA / NEE vraag \n1 = Info \n2 = BERICHT \n3 = WAARSCHUWING \nTimeout = Seconden or 0 voor oneindige weergave \nMessage = Je tekst"
         },
         "args": [
           {
@@ -163,7 +175,8 @@
             "type": "text",
             "placeholder": {
               "en": "Message Text",
-              "de": "Nachrichten Text"
+              "de": "Nachrichten Text",
+              "nl": "Bericht tekst"
             }
           
           }
@@ -173,46 +186,53 @@
         "id": "powerstate_deepstandby",
         "title": {
           "en": "deep standby mode",
-          "de": "Tiefschlaf modus"
+          "de": "Tiefschlaf modus",
+          "nl": "Deep standby modus"
         },
         "hint": {
           "en": "No Software Control will be possible, after executing of this Command!",
-          "de": "Nach dem ausführen dieses Kommandos wird keine weitere Software Kontrolle möglich sein!"
+          "de": "Nach dem ausführen dieses Kommandos wird keine weitere Software Kontrolle möglich sein!",
+          "nl": "Software bediening zal na het uitvoeren van dit commando niet meer mogelijk zijn!"
         }
       },
       {
         "id": "powerstate_reboot",
         "title": {
           "en": "reboot receiver",
-          "de": "Neustart Receiver"
+          "de": "Neustart Receiver",
+          "nl": "Herstart ontvanger"
         }
       },
       {
         "id": "powerstate_restart_enigma2",
         "title": {
           "en": "reboot enigma2 software",
-          "de": "Neustart enigma2 Software"
+          "de": "Neustart enigma2 Software",
+          "nl": "Herstart de enigma2 Software"
         }
       },
       {
         "id": "powerstate_on",
         "title": {
           "en": "standby wake",
-          "de": "standby verlassen"
+          "de": "standby verlassen",
+          "nl": "Slaapstand opheffen"
         }
       },
       {
         "id": "powerstate_off",
         "title": {
           "en": "standby mode",
-          "de": "standby einleiten"
+          "de": "standby einleiten",
+          "nl": "slaapstand"
         }
       },
       {
         "id": "vol_set",
         "title": {
           "en": "set Volume to (0-100)",
-          "de": "Lautstärke festlegen (0-100)"
+          "de": "Lautstärke festlegen (0-100)",
+          "nl": "Volume instellen (0-100)"
         },
         "args": [
           {
@@ -223,7 +243,8 @@
             "step": 1,
             "placeholder": {
               "en": "Volume set (0% - 100%)",
-              "de": "Lautstärke festlegen (0% - 100%)"
+              "de": "Lautstärke festlegen (0% - 100%)",
+              "nl": "Volume instellen (0% - 100%)"
             }
           }
         ]
@@ -232,14 +253,16 @@
         "id": "vol_mute",
         "title": {
           "en": "Volume mute",
-          "de": "Lautstärke stumm"
+          "de": "Lautstärke stumm",
+          "nl": "Volume gedemd"
         }
       },
       {
         "id": "vol_unmute",
         "title": {
           "en": "Volume unmute",
-          "de": "Lautstärke stumm aufheben"
+          "de": "Lautstärke stumm aufheben",
+          "nl": "Gedemd volume opheffen"
         }
       }
     ]
