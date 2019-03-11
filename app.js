@@ -3,212 +3,49 @@ const Homey = require('homey');
 var request = require('request');
 
 // Build enigma2 Host from Config (make variables single for later use as well)
-const enigma2_IP = Homey.ManagerSettings.get('enigma2_ip');
-const enigma2_Port = Homey.ManagerSettings.get('enigma2_port');
-var enigma2Host = enigma2_IP + ':' + enigma2_Port;
+const enigma2_ip = Homey.ManagerSettings.get('enigma2_ip');
+const enigma2_port = Homey.ManagerSettings.get('enigma2_port');
+var enigma2_host = enigma2_ip + ':' + enigma2_port;
 
-//Homey Requirement
+// Homey Requirement
 class enigma2 extends Homey.App {
 	onInit() {
 		this.log(Homey.__("appLogStart"));
 	}
 }
 
-
-// Start Volume
-// Function Volume Control
-function VolumeControl(Volume) {
-	var volumeControl_call = ('http://' + enigma2Host + '/web/vol?set=' + Volume);
-	var options = {
-		url: volumeControl_call,
-		headers: { enigma2Host }
+// Call Function general
+function call_enigma2 (call_spec){
+	var call_adress = ('http://'+enigma2_host+'/web/'+call_spec);
+	var options ={
+		url: call_adress,
+		headers: enigma2_host
 	};
-	function callback(error, response, body) {
+	console.log('Following Call was send: '+call_adress+' to '+enigma2_host);
+	function callback(error, response, body){
 		if (!error && response.statusCode == 200){
-			console.log('Following Call was made successfully(Volume): \n'+volumeControl_call);
+			console.log('Previous Call was made successfully.');
 		}
 		else {
-			console.log('Following Error occured when Fuction VolumeControl was called: \n Call used:'+volumeControl_call+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
-			}
-	}
-	request(options, callback);
-}
-// Function Mute Control 
-function VolumeControlMute (e2ismuted) {
-	var volumeMute_call = ('http://' + enigma2Host + '/web/vol');
-	var options = {
-		url: volumeMute_call,
-		headers: { enigma2Host }
-	  };
-	  function callback(error, response, body) {
-		if (!error && response.statusCode == 200) {
-		  if (e2ismuted === 'mute' && body.indexOf('False') !== -1) {
-				VolumeControl('mute')
-				console.log('Following Call was made successfully(mute): \n'+volumeMute_call);
-		  }
-		  if (e2ismuted === 'unmute' && body.indexOf('True') !== -1) {
-			VolumeControl('down');
-			VolumeControl('up');
-			console.log('Following Call was made successfully(unmute): \n'+volumeMute_call);
-		  }
-		  else {
-				console.log('Following Error occured when Fuction VolumeControlMute was called: \nCall used: '+volumeMute_call+' \nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
-			}
-		}
-	  }
-	  request(options, callback);
-}
-
-
-// then / action Flowcards Volume
-//Set Mute Flowcard
-let setMuteAction = new Homey.FlowCardAction('vol_mute');
-setMuteAction
-  .register()
-  .registerRunListener(() => {
-	VolumeControlMute('mute');
-    return true;
-});
-//Set Unmute Flowcard
-let setUnmuteAction = new Homey.FlowCardAction('vol_unmute');
-setUnmuteAction
-  .register()
-  .registerRunListener(() => {
-	VolumeControlMute('unmute');
-    return true;
-});
-//Set Volume Flowcard
-let setVolumeAction = new Homey.FlowCardAction('vol_set');
-setVolumeAction
-  .register()
-  .registerRunListener(( args) => {
-	  var Volume = 'set' + args.volume;
-	VolumeControl(Volume);
-    return true;
-});
-// End Volume
-
-
-// Start Power Control
-// Function Power On / Off decision
-function checkPowerState(powerstate) {
-	var checkPower_call = ('http://' + enigma2Host + '/web/powerstate');
-	var options = {
-		url: checkPower_call,
-		headers: { enigma2Host }
+			console.log('Previous Call Failed with following Informations:\nError: '+!error+'\nResponse Status Code: '+response.statusCode+'\nBody:\n'+body+'\n+++++++++++++++++++++++++++++++');
+		};
 	};
-	function callback(error, response, body) {
-		if (!error && response.statusCode == 200) {
-			if (powerstate === 'ON' && body.indexOf('true') !== -1) {
-				sendCommandID('powerstate?newstate=0');
-				console.log('Following Call was made successfully(Power ON = true): \n'+checkPower_call);
-			}
-			if (powerstate === 'OFF' && body.indexOf('false') !== -1) {
-				sendCommandID('powerstate?newstate=0');
-				console.log('Following Call was made successfully(Power ON = false): \n'+checkPower_call);
-			}
-		}
-		else {
-			console.log('Following Error occured when Fuction checkPowerState was called: \n Call used: '+checkPower_call+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
-		}
-	}
 	request(options, callback);
-}
-
-
-// then / action Flowcards Power
-//Power On Flowcard
-let powerstateONAction = new Homey.FlowCardAction('powerstate_on');
-powerstateONAction
-	.register()
-	.registerRunListener(() => {
-		checkPowerState('ON');
-		return true;
-	});
-//Power Off Flowcard
-let powerstateOFFAction = new Homey.FlowCardAction('powerstate_off');
-powerstateOFFAction
-	.register()
-	.registerRunListener(() => {
-		checkPowerState('OFF');
-		return true;
-	});
-//Restart enigma2 Software Flowcard
-let powerstateRestartE2Action = new Homey.FlowCardAction('powerstate_restart_e2');
-powerstateRestartE2Action
-	.register()
-	.registerRunListener(() => {
-		sendCommandID('powerstate?newstate=3');
-		return true;
-	});
-//Restart Receiver Flowcard
-let powerstateRebootBoxAction = new Homey.FlowCardAction('powerstate_rebootBox');
-powerstateRebootBoxAction
-	.register()
-	.registerRunListener(() => {
-		sendCommandID('powerstate?newstate=2');
-		return true;
-	});
-//Send Receiver to Deep Standby Flowcard
-let powerstateSendToDeepStandbyAction = new Homey.FlowCardAction('powerstate_deepStandy');
-powerstateSendToDeepStandbyAction
-	.register()
-	.registerRunListener(() => {
-		sendCommandID('powerstate?newstate=1');
-		return true;
-	});
-// End Power Control
-
-
-// Command ID Send Start
-// Function Command ID
-function sendCommandID(commandID) {
-	var command_call = ('http://' + enigma2Host + '/web/' + commandID);
-	var options = {
-		url: command_call,
-		headers: { enigma2Host }
-	};
-	function callback(error, response, body) {
-		if (!error && response.statusCode == 200) {
-			console.log('Following Call was made successfully: \n'+command_call);
-			}
-	else {
-		console.log('Following Error occured when Fuction sendCommandID was called: \n Call used: '+command_call+'\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
-		}
-	}
-	request(options, callback);
-}
-// then / action Flowcards Command ID
-//Send Command ID Flowcard
+	
+};
+// Control Flowcards
+// then / action Flowcards
 let sendCommandAction = new Homey.FlowCardAction('command_send');
 sendCommandAction
   .register()
   .registerRunListener((args) => {
-	  var commandID = 'remotecontrol?command=' + args.command;
-	  sendCommandID(commandID);
+	  var call_spec = ('remotecontrol?command=' + args.command);
+	  call_enigma2(call_spec);
     return true;
 });
-// Command ID Send End
 
-// Send Message Start
-// Function send Message
-function sendMessage(msg_txt, msg_type, msg_timeout) {
-	var msg_call = ("http://"+ enigma2Host + "/web/message?text=" + msg_txt + "&type=" + msg_type + "&timeout=" + msg_timeout);
-	var options={
-		url: msg_call,
-		headers: { enigma2Host }
-	};
-	function callback(error, response, body){
-		if (!error && response.statusCode == 200){
-			console.log('Following Call was made successfully: \n'+msg_call);
-		}
-		else {
-			console.log('Following Error occured when Fuction sendMessage was called: \n Call used: '+ msg_code + '\nError:' +!error+ '\nResponse Status Code: '+response.statusCode+ '\nBody: \n'+body+'\n');
-		}
-	}
-	request(options, callback);
-}
-// then / action Flowcards send Message
+// Message Flowcards
+// then / action Flowcards
 let sendMessageAction = new Homey.FlowCardAction('message_send');
 sendMessageAction
   .register()
@@ -223,10 +60,91 @@ sendMessageAction
 		} else {
 			var msg_timeout = timeout;
 		}
-	  sendMessage(msg_txt,msg_type, msg_timeout);
+		var call_spec = ('message?text='+msg_txt+'&type='+msg_type+'&timeout='+msg_timeout)
+	  call_enigma2(call_spec);
     return true;
 });
 
-// Send Message End
+// Powerstate Flowcards
+
+
+// then / action Flowcards
+// Deepstandby
+let powerstateONAction = new Homey.FlowCardAction('powerstate_deepstandby');
+powerstateONAction
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=1');
+		call_enigma2(call_spec);
+		return true;
+});
+// Reboot
+let powerstateRebootAction = new Homey.FlowCardAction('powerstate_reboot');
+powerstateRebootAction
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=2');
+		call_enigma2(call_spec);
+		return true;
+});
+// Restart Enigma2
+let powerstateReboot_e2Action = new Homey.FlowCardAction('powerstate_restart_enigma2');
+powerstateReboot_e2Action
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=3');
+		call_enigma2(call_spec);
+		return true;
+});
+// Wakeup from Standby
+let powerstateWakeupAction = new Homey.FlowCardAction('powerstate_on');
+powerstateWakeupAction
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=4');
+		call_enigma2(call_spec);
+		return true;
+});
+// standby
+let powerstateStandbyAction = new Homey.FlowCardAction('powerstate_off');
+powerstateStandbyAction
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('powerstate?newstate=5');
+		call_enigma2(call_spec);
+		return true;
+});
+
+// Volume Flowcards
+// then / action Flowcards
+// set Volume to X
+let volSetAction = new Homey.FlowCardAction('vol_set');
+volSetAction
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('vol?set=set'+args.volume);
+		call_enigma2(call_spec);
+		return true;
+});
+// Volume mute
+let volMuteAction = new Homey.FlowCardAction('vol_mute');
+volMuteAction
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('vol?set=mute');
+		call_enigma2(call_spec);
+		return true;
+	});
+// Volume unmute
+let volUnmuteAction = new Homey.FlowCardAction('vol_unmute');
+volUnmuteAction
+	.register()
+	.registerRunListener((args) => {
+		var call_spec = ('vol?set=down');
+		call_enigma2(call_spec);
+		var call_spec = ('vol?set=up');
+		call_enigma2(call_spec);
+		return true;
+});
 
 module.exports = enigma2;
