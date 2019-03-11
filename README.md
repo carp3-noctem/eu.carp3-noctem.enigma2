@@ -80,6 +80,10 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
+## Version 0.1.7
+
+- Fixing Code error with wrong files sended to Github
+
 ## Version 0.1.6
 
 - NL Translation with thanks to Martin Timmermans
