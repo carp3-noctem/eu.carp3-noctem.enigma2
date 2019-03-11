@@ -130,15 +130,7 @@
     "request": "^2.81.0"
   },
   "flow": {
-    "conditions":[
-      {
-        "id": "isPowered",
-        "title":{
-          "en": "Receiver !{{is|isn't}} powered",
-          "de": "Receiver !{{ist|ist nicht}} an"
-        }
-      }
-    ],
+    
     "actions": [
       {
         "id": "command_send",

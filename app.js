@@ -66,34 +66,7 @@ sendMessageAction
 });
 
 // Powerstate Flowcards
-// and / condition Flowcards
-// Powerstate
-let powerCondition = new Homey.FlowCardCondition('isPowered');
-powerCondition
-	.register()
-	.registerRunListener((args, state ) => {
-			var call_spec = ('powerstate');
-			var call_adress = ('http://'+enigma2_host+'/web/'+call_spec);
-			var options ={
-				url: call_adress,
-				headers: enigma2_host
-			};
-			console.log('Following Call was send: '+call_adress+' to '+enigma2_host);
-			function callback(error, response, body){
-				if (!error && response.statusCode == 200 && body.indexOf('false') !== -1){
-					console.log('Previous Call was made successfully. Receiver is Running');
-					return true;
-				}
-				if (!error && response.statusCode == 200 && body.indexOf('true') !== -1){
-					console.log('Previous Call was made successfully. Receiver is not Running');
-					return false;
-				}
-				else {
-					console.log('Previous Call Failed with following Informations:\nError: '+!error+'\nResponse Status Code: '+response.statusCode+'\nBody:\n'+body+'\n+++++++++++++++++++++++++++++++');
-				};
-			};
-			request(options, callback);		
-});
+
 
 // then / action Flowcards
 // Deepstandby
