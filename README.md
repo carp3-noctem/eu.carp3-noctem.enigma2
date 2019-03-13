@@ -38,9 +38,9 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 
 ### Supported Languages
 
-- [x] dutch
-- [x] english
-- [x] german
+- [x] 🇳🇱 dutch
+- [x] 🇬🇧 english
+- [x] 🇩🇪 german
 - [ ] other [Contribute here](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) or file a pull request on GitHub
 
 ## deep standby mode
