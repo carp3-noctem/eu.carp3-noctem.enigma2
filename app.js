@@ -14,8 +14,8 @@ class enigma2 extends Homey.App {
 	}
 }
 
-// Call Function general
-function call_enigma2 (call_spec){
+// Call Function action Flowcards
+async function call_enigma2 (call_spec){
 	var call_adress = ('http://'+enigma2_host+'/web/'+call_spec);
 	var options ={
 		url: call_adress,
@@ -30,8 +30,7 @@ function call_enigma2 (call_spec){
 			console.log('Previous Call Failed with following Informations:\nError: '+!error+'\nResponse Status Code: '+response.statusCode+'\nBody:\n'+body+'\n+++++++++++++++++++++++++++++++');
 		};
 	};
-	request(options, callback);
-	
+	request(options, callback);	
 };
 // Control Flowcards
 // then / action Flowcards
@@ -64,9 +63,6 @@ sendMessageAction
 	  call_enigma2(call_spec);
     return true;
 });
-
-// Powerstate Flowcards
-
 
 // then / action Flowcards
 // Deepstandby

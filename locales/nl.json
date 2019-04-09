@@ -1,0 +1,18 @@
+{
+    "appLogStart":"enigma2 app succesvol gestart.",
+    "settings":{
+        "header": "enigma2 configuratiepagina",
+        "alpha": "-- De app is in Beta fase --",
+        "description": "Momenteel is het vereist om het IP adres en het poortnummer van je Enigma2 ontvanger handmatig in te stellen. Daarom is het aan te raden een statisch IP adres voor je ontvanger te gebruiken.",
+        "warning": "Gezien de huidige beta status bestaat de kans op het onverwacht crashen van de app. Indien u tegen problemen aanloopt, meld ze svp op GitHub of in het Homey Topic!",
+        "config": "Configuratie Data:",
+        "ip": "IP Adres: ",
+        "port": "Poort: ",
+        "button": "Sla de configuratie op",
+        "obtain_info_header": "Verkrijg de benodigde informatie:",
+        "info_ipadress": "IP adres: ",
+        "info_ipadress_body": "Open op uw ontvanger het volgende menu&#58;<br>Open Main Menu<br>Selecteer Setup<br>Selecteer System<br>Selecteer Network<br>Kies Adapter Settings<br>Onder Current configuration vind je het ip adres",
+        "info_port": "Poort: ",
+        "info_port_body": "Indien u niets aangepast heeft, zou uw poort moeten zijn:<br>80<br>of<br>8080<br>Dit is afhankelijk van het type ontvanger dat gebruikt wordt.<br>Indien je dit wilt controleren, open een webbrowser en typ het adres van uw ontvanger in. Indien dit de WebIf opent, dan wordt poort 80 gebruikt.<br>Geeft dit een timeout of foutmelding, vul dan hetzelfde IP adres in, gevolgd door &#58;8080. Als dit de WebIf toont, dan wordt poort 8080 gebruikt.<br>Bij geen succes kunt u de instellingen van WebIf raadplegen voor de juiste poort. Open hiervoor het plugin menu en controleer de optie WebIf Config."
+    }
+}

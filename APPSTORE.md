@@ -10,25 +10,25 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 
 ## Support Overview
 
-[ ] = not yet supported
+[&nbsp;] = not yet supported
 
 [x] = support available
 
 ### when / trigger flowcards
 
-[ ] polling required, therefor currently not decided. If you like to put in arguments, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427)
+[&nbsp;] polling required, therefor currently not decided. If you like to put in arguments, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427)
 
 ### and / condition flowcards
 
-[ ] Power is ON
+[&nbsp;] Power is ON
 
-[ ] Power is OFF
+[&nbsp;] Power is OFF
 
-[ ] Radio mode is used
+[&nbsp;] Radio mode is used
 
-[ ] TV mode is used
+[&nbsp;] TV mode is used
 
-[ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
+[&nbsp;] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
 
 ### then / action flowcards
 
@@ -52,17 +52,17 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 
 [x] Volume unmute
 
-[ ] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
+[&nbsp;] ...to be continued if you have ideas, visit [Athom Community](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) and let me know
 
 ### Supported Languages
 
-[x] 🇳🇱 dutch
+[x] 🇳🇱 dutch - Thanks to Martin Timmermans
 
 [x] 🇬🇧 english
 
 [x] 🇩🇪 german
 
-[ ] other [Contribute here](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) or file a pull request on GitHub
+[&nbsp;] other [Contribute here](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) or file a pull request on GitHub
 
 ## deep standby mode
 
@@ -100,8 +100,8 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 2. Pictures of the Boxes can be found here: [OpenWebif Box Pictures](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/tree/master/plugin/public/images/boxes)
 3. Pictures of the Remotes can be found here: [OpenWebif Remote Pictures](https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/tree/master/plugin/public/images/remotes)
 
-
-
-
-
-.
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;

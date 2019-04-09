@@ -1,6 +1,7 @@
 {
     "appLogStart":"enigma2 app wurde erfolgreich gestartet",
     "settings":{
+        "header": "enigma2 Konfigurationsseite",
         "alpha": "-- DIESE APP IST IM BETA STATUS --",
         "description": "Aktuell ist es erforderlich, dass die IP-Adresse und der Port des Receivers per Hand konfiguriert werden. Am besten klappt das, wenn der Receiver vom Router immer wieder die selbe IP-Adresse zugewiesen bekommt.",
         "warning": "Durch ihren Beta Status kann die App jederzeit Abstürzen, wenn igendwelche Probleme auftreten, bitte unbedingt ein Issue in GitHub oder ein Homey Community eintrag vornehmen!",

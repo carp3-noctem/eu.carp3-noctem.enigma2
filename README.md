@@ -38,7 +38,7 @@ This Project allows Control of Enigma2 devices via [Homey](https://www.athom.com
 
 ### Supported Languages
 
-- [x] 🇳🇱 dutch
+- [x] 🇳🇱 dutch - Thanks to Martin Timmermans
 - [x] 🇬🇧 english
 - [x] 🇩🇪 german
 - [ ] other [Contribute here](https://community.athom.com/t/enigma2-dvb-boxes-support/9427) or file a pull request on GitHub
@@ -81,24 +81,7 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
-## Version 0.1.7
+## Version 1.0.0
 
-- Fixing Code error with wrong files sended to Github
-
-## Version 0.1.6
-
-- NL Translation with thanks to Martin Timmermans
-- deleted Version log up to 0.1.0 for better overview (can be found under changelog_history.md)
-
-## Version 0.1.5
-
-- rewrite of function handling
-- erased message code error
-
-## Version 0.1.1
-
-- App is now in Beta
-
-## Version 0.1.0
-
-- Better Log for Alpha Version (all actions will be loged)
+- Code Cleaning, Commenting & Formating
+- Bumping to Version 1.0.0 (first stable Release)
