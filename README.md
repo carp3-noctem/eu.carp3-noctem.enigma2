@@ -81,7 +81,7 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
-## Version 1.0.0
+## Version 1.0.1
 
 - Code Cleaning, Commenting & Formating
 - Bumping to Version 1.0.0 (first stable Release)
