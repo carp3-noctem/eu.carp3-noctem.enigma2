@@ -139,9 +139,9 @@
           "nl": "Opdracht als ID versturen"
         },
         "hint": {
-          "en": "For supported Command ID's please look at http://enigma2.carpe3-noctem.eu",
-          "de": "Für unterstützte ID's bitte unter http://enigma2.carpe3-noctem.eu schauen",
-          "nl": "Voor ondersteunde command ID's kijk svp op http://enigma2.carpe3-noctem.eu"
+          "en": "For supported Command ID's please look at http://enigma2.carp3-noctem.eu",
+          "de": "Für unterstützte ID's bitte unter http://enigma2.carp3-noctem.eu schauen",
+          "nl": "Voor ondersteunde command ID's kijk svp op http://enigma2.carp3-noctem.eu"
         },
         "args": [
           {
