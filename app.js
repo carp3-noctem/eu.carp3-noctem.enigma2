@@ -25,9 +25,10 @@ async function call_enigma2 (call_spec){
 	function callback(error, response, body){
 		if (!error && response.statusCode == 200){
 			console.log('Previous Call was made successfully.');
+			console.log(':::::::::::::::::'+response.statusCode);
 		}
 		else {
-			console.log('Previous Call Failed with following Informations:\nError: '+!error+'\nResponse Status Code: '+response.statusCode+'\nBody:\n'+body+'\n+++++++++++++++++++++++++++++++');
+			console.log('Previous Call Failed! Maybe wrong Configuration?');
 		};
 	};
 	request(options, callback);	
