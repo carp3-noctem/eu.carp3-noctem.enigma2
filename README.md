@@ -81,9 +81,9 @@ Due to limited access to all enigma2 enabled devices, i was only able to test th
 
 ## Changelog
 
-## Version 1.0.2
+## Version 1.0.3
 
-- Typo Correction
+- Typo & Text Correction
 - Fix for App Crash when wrong Configuration is used
 
 ## Version 1.0.1
